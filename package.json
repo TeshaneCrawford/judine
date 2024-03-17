@@ -44,5 +44,6 @@
     "typescript": "^5.4.2",
     "vue-tsc": "^1.8.27"
   },
-  "release-it": {}
+  "release-it": {},
+  "version": "0.0.1"
 }
