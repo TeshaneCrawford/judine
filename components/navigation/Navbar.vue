@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-// import { onBeforeUnmount, onMounted, ref } from 'vue';
-
 const links = [
   { name: 'Home', to: '/' },
   { name: 'Gallery', to: '/gallery'},
