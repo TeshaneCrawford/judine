@@ -16,8 +16,13 @@ export default defineNuxtConfig({
     "@vueuse/nuxt",
     "@nuxtjs/tailwindcss",
     "@nuxtjs/color-mode",
-    "nuxt-icon"
+    "nuxt-icon",
+    "nuxt-headlessui"
   ],
+
+  headlessui: {
+    prefix: 'Headless'
+},
 
   app: {
     head: {
