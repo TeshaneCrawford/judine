@@ -35,8 +35,30 @@ const onScroll = () => {
 </script>
 
 <template>
-  <div>
-    Component: navigation/Navbar
+  <div
+    :class="[
+      showHeader ? 'translate-y-0' : '-translate-y-full',
+      'transform-gpu transition-transform duration-500 sticky top-0 z-50'
+    ]"
+  >
+    <Container class="pt-4 lg:pt-10">
+      <div class="flex justify-between items-center">
+        logo
+        <div
+          class="border border-zinc-300/50 dark:border-zinc-900/60 rounded-full pl-2 lg:pl-4 pr-2 py-2 backdrop-blur-lg bg-zinc-100/50 dark:bg-zinc-800/50"
+        >
+          <div class="flex items-center gap-4">
+            <div class="hidden lg:block">
+              NavLinks
+            </div>
+            <div class="lg:hidden">
+              NavLinksMobile
+            </div>
+            ColorModeToggle
+          </div>
+        </div>
+      </div>
+    </Container>
   </div>
 </template>
 
