@@ -4,6 +4,8 @@ import { Bars2Icon } from "@heroicons/vue/20/solid";
 const { links } = defineProps<{
   links: { name: string; to: string }[];
 }>();
+
+const emits = defineEmits(["close"]);
 </script>
 
 <template>
