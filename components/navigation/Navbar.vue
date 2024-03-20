@@ -49,10 +49,10 @@ const onScroll = () => {
         >
           <div class="flex items-center gap-4">
             <div class="hidden lg:block">
-              <NavLinks :links="links" />
+              <NavigationNavLinks :links="links" />
             </div>
             <div class="lg:hidden">
-              <NavLinksMobile :links="links" />
+              <NavigationNavLinksMobile :links="links" />
             </div>
             ColorModeToggle
           </div>

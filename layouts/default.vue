@@ -26,7 +26,7 @@
     </Container>
 
     <!-- Navbar -->
-    <Navbar />
+    <NavigationNavbar />
 
     <!-- Main -->
     <main class="judine-prose">
@@ -36,7 +36,7 @@
     </main>
 
     <!-- Footer -->
-    <Footer class="mt-auto" />
+    <NavigationFooter class="mt-auto" />
   </article>
 </template>
 
