@@ -1,7 +1,12 @@
 export default defineNuxtPlugin(() => {
-  {
-    (...args: any[]) => {
-      return args.filter((x) => x !== undefined).join(' ');
+  return {
+    provide: {
+      /**
+       * Merge all arguments into a single classname string.
+       */
+      cls: (...args: any[]) => {
+          return args.filter((x) => x).join(' ')
+      }
     }
   }
 })
