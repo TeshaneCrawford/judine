@@ -54,7 +54,7 @@ const onScroll = () => {
             <div class="lg:hidden">
               <NavigationNavLinksMobile :links="links" />
             </div>
-            ColorModeToggle
+            <ThemeColorMode />
           </div>
         </div>
       </div>
