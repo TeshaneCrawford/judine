@@ -1,8 +1,8 @@
 <script lang="ts" setup></script>
 
 <template>
-  <article class="min-h-dvh flex flex-col items-stretch">
-    <!-- Ring -->
+  <article class="min-h-screen flex flex-col items-stretch">
+    <!-- ring -->
     <div class="fixed inset-0 flex justify-center sm:px-8">
       <div class="flex w-full max-w-7xl lg:px-8">
         <div
@@ -11,31 +11,31 @@
       </div>
     </div>
 
-    <!-- Background -->
+    <!-- background -->
     <Container class="relative">
       <div class="absolute top-0 right-0">
         <NuxtImg
-          src="/img/bg-glow.png"
+          src="img/bg-glow.png"
           aria-hidden="true"
           class="w-[44rem]"
           format="webp"
-          height="944"
-          width="586"
+          width="944"
+          height="586"
         />
       </div>
     </Container>
 
-    <!-- Navbar -->
+    <!-- header -->
     <NavigationNavbar />
 
-    <!-- Main -->
+    <!-- main -->
     <main class="judine-prose">
       <Container>
         <slot />
       </Container>
     </main>
 
-    <!-- Footer -->
+    <!-- footer -->
     <NavigationFooter class="mt-auto" />
   </article>
 </template>
