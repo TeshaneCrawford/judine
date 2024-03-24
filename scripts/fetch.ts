@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const sharp = require('sharp');
 
-const dir = path.join(__dirname, '/public/img/galleries/gallery1');
+const dir = path.join(__dirname, '/public/img/galleries/gal6');
 const files = fs.readdirSync(dir);
 
 const getImages = async (files: string[]) => {
@@ -10,7 +10,7 @@ const getImages = async (files: string[]) => {
   for (const file of files) {
     const { width, height } = await sharp(`${dir}/${file}`).metadata();
     images.push({
-      src: `/img/galleries/gallery1/${file}`,
+      src: `/img/galleries/gal6/${file}`,
       alt: file,
       width,
       height

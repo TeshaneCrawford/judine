@@ -25,6 +25,7 @@
     "tailwind.config.cjs"
   ],
   "dependencies": {
+    "@fancyapps/ui": "^5.0.35",
     "@heroicons/vue": "^2.1.1",
     "@nuxt/content": "^2.12.1",
     "@nuxt/image": "^1.0.0",
