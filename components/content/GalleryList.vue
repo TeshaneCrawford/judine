@@ -1,5 +1,16 @@
 <script lang="ts" setup>
 import { withTrailingSlash } from 'ufo';
+import type { ParsedContent } from '@nuxt/content/dist/runtime/types'
+
+import type { Image } from '~/types/image';
+
+type Gallery = {
+  _path: string;
+  title: string;
+  description?: string;
+  cover?: Image;
+  images?: Image[];
+};
 
 const props = defineProps({
   path: {
@@ -10,11 +21,15 @@ const props = defineProps({
 
 const { data: _galleries } = await useAsyncData(
   "galleries",
-  async () =>
-    await queryContent(withTrailingSlash(props.path)).find()
+  async () => await queryContent(withTrailingSlash(props.path)).find() as ParsedContent[]
 );
 
-const galleries = computed(() => _galleries.value || [])
+
+
+const galleries = computed(() =>
+  (_galleries.value as Gallery[]) || []
+)
+
 </script>
 
 <template>

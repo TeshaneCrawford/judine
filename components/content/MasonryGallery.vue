@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { $img } from '@nuxt/image';
 import type { Image } from '../../types/image';
 
 interface itemPropsT {
@@ -26,10 +27,10 @@ defineProps<Props>();
         >
           <template #default="{ item }: itemPropsT">
             <a
-              class="photoswipe-item rounded-xl overflow-hidden block dark:bg-zinc-800 bg-zinc-200"
+              class="rounded-xl overflow-hidden block dark:bg-zinc-800 bg-zinc-200"
               :href="$img(item.src, { width: 1600 })"
-              data-cropped="true"
               data-fancybox="gallery"
+              data-cropped="true"
             >
               <NuxtImg
                 :src="item.src"

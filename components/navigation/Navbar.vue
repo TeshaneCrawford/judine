@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 const links = [
   { name: 'Home', to: '/' },
-  { name: 'Gallery', to: '/gallery'},
+  { name: 'Galleries', to: '/galleries'},
   { name: 'Art', to: '/art'},
   { name: 'Stories', to: '/stories'},
   { name: 'Bio', to: '/bio'},

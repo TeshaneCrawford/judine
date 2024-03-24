@@ -2,10 +2,12 @@
 import type { Ref } from "vue";
 import { nextTick, onBeforeUnmount, onMounted, ref, toRefs, watch } from "vue";
 
+import type { Image } from "~/types/image";
+
 type Column = number[];
 
 interface Props {
-  items: unknown[];
+  items: Image[];
   columnWidth?: number;
   gap?: number;
   rtl?: boolean;
