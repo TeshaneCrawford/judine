@@ -16,7 +16,7 @@ defineProps<Props>();
 
 <template>
   <div class="not-prose">
-    <FancyBox :options="{ Carousel: { infinite: false } }">
+    <FancyBox>
       <div>
         <MasonryWall
           :items="images"

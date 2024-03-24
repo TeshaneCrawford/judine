@@ -7,7 +7,14 @@ import '@fancyapps/ui/dist/fancybox/fancybox.css';
 const props = defineProps({
   options: {
     type: Object,
-    default: () => ({})
+    default: () => ({
+      Carousel: {
+        infinite: true,
+        transition: 'fade'
+      },
+      infobar: true,
+      toolbar: true,
+    })
   }
 });
 
