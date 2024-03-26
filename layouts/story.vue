@@ -20,7 +20,7 @@
       <NavigationNavbar />
       <main>
         <Container>
-          <div class="mt-12 lg:mt-24 judine-prose-story">
+          <div class="mt-12 lg:mt-24 judine-prose">
             <slot />
           </div>
         </Container>
