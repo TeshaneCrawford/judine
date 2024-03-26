@@ -9,7 +9,7 @@ type Gallery = {
   images?: Image[];
 };
 
-const props = defineProps({
+defineProps({
   gallery: {
     type: Object as PropType<Gallery>,
     required: true,
