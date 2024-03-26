@@ -2,8 +2,8 @@
 const links = [
   { name: 'Home', to: '/' },
   { name: 'Gallery', to: '/gallery'},
-  { name: 'Art', to: '/art'},
   { name: 'Stories', to: '/stories'},
+  { name: 'Album', to: '/album'},
   { name: 'Bio', to: '/bio'},
   { name: 'Contact', to: '/contact'},
 ] as { name: string; to: string }[];
