@@ -16,14 +16,15 @@ const pictures = [
           :key="index"
           :href="picture"
           data-fancybox="gallery"
-          class="p-2"
+          class="p-2 block mx-auto w-3/4 object-fill"
         >
           <NuxtImg
             :src="picture"
-            width="1600"
-            height="1600"
+            width="800"
+            height="600"
             :alt="'Story ' + (index + 1)"
-            class=""
+            sizes=""
+            loading="lazy"
           />
         </a>
       </div>
