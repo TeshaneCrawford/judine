@@ -4,7 +4,7 @@
 
 @layer utilities {
   .text-gradient {
-    @apply text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-pink-600;
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-600;
   }
   .judine-prose {
     @apply prose max-w-none lg:prose-lg;
