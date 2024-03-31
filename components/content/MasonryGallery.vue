@@ -22,12 +22,12 @@ defineProps<Props>();
           :items="images"
           :ssr-columns="1"
           :column-width="300"
-          :gap="32"
-          class="grid grid-cols-2 lg:grid-cols-3 gap-8"
+          :gap="14"
+          class=""
         >
           <template #default="{ item }: itemPropsT">
             <a
-              class="rounded-xl overflow-hidden block dark:bg-zinc-800 bg-zinc-200"
+              class=" overflow-hidden block dark:bg-zinc-800 bg-zinc-200"
               :href="item.src"
               data-fancybox="gallery"
               data-cropped="true"

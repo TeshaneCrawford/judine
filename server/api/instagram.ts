@@ -1,4 +1,4 @@
-import { InstagramMedia } from "~/types/instagram-post";
+import type { InstagramMedia } from "~/types/instagram-post";
 
 interface InstagramResponse {
   data: InstagramMedia[]
