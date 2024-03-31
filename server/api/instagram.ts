@@ -5,10 +5,10 @@ interface InstagramResponse {
 }
 
 export default defineEventHandler(async (event) => {
-  const accessToken = '';
+  const { instgramToken } = useRuntimeConfig(event)
 
   const response = await fetch(
-    `https://graph.instagram.com/me/media?fields=id,media_type,media_url,caption&access_token=${accessToken}`
+    `https://graph.instagram.com/me/media?fields=id,media_type,media_url,caption&access_token=${instgramToken}`
   );
 
   const data: InstagramResponse = await response.json();

@@ -61,5 +61,9 @@ export default defineNuxtConfig({
 
   plugins: [
     '~/plugins/parallax/index.ts',
-  ]
+  ],
+
+  runtimeConfig: {
+    instagramToken: process.env.NUXT_INSTAGRAM_TOKEN,
+  }
 })
