@@ -74,5 +74,9 @@ export default defineNuxtConfig({
     instagramToken: process.env.NUXT_INSTAGRAM_ACCESS_TOKEN,
     supabaseUrl: process.env.NUXT_SUPABASE_URL,
     supabaseKey: process.env.NUXT_SUPABASE_KEY
+  },
+
+  experimental: {
+    viewTransition: true,
   }
 })
