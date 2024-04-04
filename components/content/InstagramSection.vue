@@ -6,8 +6,8 @@ const { data: instaData } = useFetch<InstagramData>('/api/instagram');
 </script>
 
 <template>
-  <section class="not-prose mx-0.5 mb-5">
-    <h1>
+  <section class="not-prose mx-0.5 mb-5 mt-16">
+    <h1 class="text-4xl font-semibold">
       Recent Instagram Posts
     </h1>
 
@@ -28,7 +28,7 @@ const { data: instaData } = useFetch<InstagramData>('/api/instagram');
         :to="socialLinks.find(item => item.title === 'Instagram')?.to!"
         class="flex items-center justify-center gap-1 font-medium transition border-transparent font-inter active:scale-95 active:border-black w-fit group"
       >
-        <span class="group-hover:underline">View More on Instagram</span>
+        <span class="group-hover:underline group-hover:underline-offset-4">View More on Instagram</span>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"

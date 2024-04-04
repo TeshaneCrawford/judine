@@ -27,10 +27,10 @@ const socialLinks = useSiteConfig().value.socialLinks || [];
           v-if="socialLinks"
           class="flex flex-wrap gap-x-4 gap-y-1"
         >
-          <a
+          <NuxtLink
             v-for="(link, index) in socialLinks"
             :key="index"
-            :href="link.to"
+            :to="link.to"
             target="_blank"
             rel="noopener noreferrer"
             class="inline-flex items-center justify-center text-sm hover:underline hover:underline-offset-2"
@@ -39,8 +39,7 @@ const socialLinks = useSiteConfig().value.socialLinks || [];
               :name="link.logo"
               class="w-5 h-5"
             />
-
-          </a>
+          </NuxtLink>
         </div>
 
         <p class="text-sm">

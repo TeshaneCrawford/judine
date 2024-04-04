@@ -39,16 +39,24 @@ export const useSiteConfig = (): Ref<SiteConfig> => {
         to: 'https://www.instagram.com/judinefiddler/'
       },
       {
+        title: 'Facebook',
         logo: 'i-ri-facebook-fill',
         to: 'https://www.facebook.com/judinefiddler/'
       },
       {
+        title: 'Twitter',
         logo: 'i-ri-twitter-x-fill',
-        to: 'https://twitter.com/judinefiddler'
+        to: 'https://x.com/judinefiddler'
       },
       {
+        title: 'Threads',
         logo: 'i-ri-threads-fill',
-        to: 'https://www.threadless.com/@judinefiddler'
+        to: 'https://www.threads.net/@judinefiddler'
+      },
+      {
+        title: 'LinkedIn',
+        logo: 'i-ri-linkedin-fill',
+        to: 'https://www.linkedin.com/in/judinefiddler/'
       }
     ]
   });
