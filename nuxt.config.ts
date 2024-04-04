@@ -17,7 +17,8 @@ export default defineNuxtConfig({
     "@nuxtjs/tailwindcss",
     "@nuxtjs/color-mode",
     "nuxt-icon",
-    "nuxt-headlessui"
+    "nuxt-headlessui",
+    "@nuxtjs/supabase"
   ],
 
   headlessui: {
@@ -63,7 +64,15 @@ export default defineNuxtConfig({
     '~/plugins/parallax/index.ts',
   ],
 
+  supabase: {
+    url: process.env.NUXT_SUPABASE_URL,
+    key: process.env.NUXT_SUPABASE_KEY,
+    redirect: false
+  },
+
   runtimeConfig: {
-    instagramToken: process.env.NUXT_INSTAGRAM_TOKEN,
+    instagramToken: process.env.NUXT_INSTAGRAM_ACCESS_TOKEN,
+    supabaseUrl: process.env.NUXT_SUPABASE_URL,
+    supabaseKey: process.env.NUXT_SUPABASE_KEY
   }
 })

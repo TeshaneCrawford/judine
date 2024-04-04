@@ -37,6 +37,7 @@
   "devDependencies": {
     "@nuxt/eslint-config": "^0.2.0",
     "@nuxtjs/color-mode": "^3.3.3",
+    "@nuxtjs/supabase": "^1.2.0",
     "@nuxtjs/tailwindcss": "^6.11.4",
     "@tailwindcss/typography": "^0.5.12",
     "@types/rellax": "^1.7.7",

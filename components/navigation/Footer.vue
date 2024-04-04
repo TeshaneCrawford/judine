@@ -5,7 +5,7 @@ const socialLinks = useSiteConfig().value.socialLinks || [];
 
 <template>
   <Container>
-    <footer class="w-full max-w-3xl mx-auto pt-12 pb-10 sm:pt-24 sm:pb-14 px sm:px-0 text-gray-600 dark:text-gray-300">
+    <footer class="w-full  mx-auto pt-12 pb-10 sm:pt-24 sm:pb-14 px sm:px-0 text-gray-600 dark:text-gray-300">
       <div
         v-if="footerNavigationLinks.length > 0"
         class="mb-4 flex flex-wrap gap-x-6 gap-y-1"

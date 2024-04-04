@@ -7,6 +7,7 @@ export type SiteConfig = {
     to: string;
   }[];
   socialLinks?: {
+    title?: string;
     logo: string;
     to: string;
   }[];
@@ -33,6 +34,7 @@ export const useSiteConfig = (): Ref<SiteConfig> => {
     ],
     socialLinks: [
       {
+        title: 'Instagram',
         logo: 'i-ri-instagram-line',
         to: 'https://www.instagram.com/judinefiddler/'
       },

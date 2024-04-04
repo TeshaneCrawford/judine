@@ -1,16 +1,21 @@
-import type { InstagramMedia } from "~/types/instagram-post";
-
-interface InstagramResponse {
-  data: InstagramMedia[]
-}
+import { getInstagramPosts } from "../utils/instagramhandler";
 
 export default defineEventHandler(async (event) => {
-  const { instgramToken } = useRuntimeConfig(event)
+  const paginationCode = event.context.params?.code ?? null; // Access query parameters
+  const mode = event.context.params?.mode ?? null;
 
-  const response = await fetch(
-    `https://graph.instagram.com/me/media?fields=id,media_type,media_url,caption&access_token=${instgramToken}`
+  const additionalParams = mode
+    ? mode === "before"
+      ? { before: paginationCode }
+      : { after: paginationCode }
+    : {};
+
+  const outputData = await getInstagramPosts(additionalParams);
+
+  event.node.res.setHeader(
+    "Cache-Control",
+    "public, s-maxage=3600, stale-while-revalidate=1800"
   );
 
-  const data: InstagramResponse = await response.json();
-  return data;
+  return outputData;
 });
