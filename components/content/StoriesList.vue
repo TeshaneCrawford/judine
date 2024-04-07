@@ -32,7 +32,7 @@ const stories = computed(() => (_stories.value as Story []) || []);
 <template>
   <div
     v-if="stories?.length"
-    class="not-prose grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
+    class="not-prose grid grid-cols-1 md:grid-cols-2 gap-4"
   >
     <StoriesListItem
       v-for="story in stories"
