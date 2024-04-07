@@ -1,32 +1,32 @@
 <script lang="ts" setup>
-import type { Image } from '../../types/image';
-const pictures = [
-  '/img/stories/01.jpg',
-  '/img/stories/02.jpg',
-  '/img/stories/03.jpg',
-]
+const { images } = defineProps<{
+  images: {
+    src: string
+    alt: string
+  }[]
+}>()
 </script>
 
 <template>
-  <div class="not-prose">
+  <div class="not-prose pb-8 grid grid-cols-1 lg:grid-cols-1 gap-2 place-items-center">
     <FancyBox>
-      <div>
-        <a
-          v-for="(picture, index) in pictures"
+      <div class="gap-2 grid">
+        <div
+          v-for="(image, index) in images"
           :key="index"
-          :href="picture"
+          :href="image.src"
           data-fancybox="gallery"
-          class="p-2 block mx-auto w-3/4 object-fill"
+          class=" gap-2"
         >
           <NuxtImg
-            :src="picture"
-            width="800"
-            height="600"
-            :alt="'Story ' + (index + 1)"
-            sizes=""
+            :src="image.src"
+            :alt="image.alt"
             loading="lazy"
+            class="object-cover"
+            :width="800"
+            :height="800"
           />
-        </a>
+        </div>
       </div>
     </FancyBox>
   </div>

@@ -10,7 +10,7 @@ const { src1, src2, src3, alt1, alt2, alt3 } = defineProps<{
 </script>
 
 <template>
-  <div class="not-prose pb-8 grid lg:grid-cols-3 gap-3 lg:gap-6 aspect-[1] sm:aspect-[4/3] lg:aspect-[4/3] lg:-mr-12 lg:-ml-12">
+  <div class="not-prose pb-8 grid lg:grid-cols-3 gap-3 lg:gap-6 aspect-[1] sm:aspect-[4/3] lg:aspect-[4/3]">
     <div
       class="col-span-2 row-span-2 dark:bg-gray-800 rounded-md lg:rounded-xl overflow-hidden"
     >
