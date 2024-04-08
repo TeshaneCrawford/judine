@@ -18,7 +18,8 @@ export default defineNuxtConfig({
     "@nuxtjs/color-mode",
     "nuxt-icon",
     "nuxt-headlessui",
-    "@nuxtjs/supabase"
+    "@nuxtjs/supabase",
+    '@nuxthub/core'
   ],
 
   headlessui: {
