@@ -3,7 +3,21 @@
       "source.fixAll.eslint": "explicit"
     },
     "files.associations": {
-      "*.css": "postcss"
-    },
+      "*.css": "tailwind, postcss"
+  },
+  "editor.quickSuggestions": {
+      "strings": true
+  },
+  "tailwindCSS.experimental.configFile": "tailwind.config.cjs",
+  "tailwindCSS.experimental.classRegex": [
+    ["ui:\\s*{([^)]*)\\s*}", "[\"'`]([^\"'`]*).*?[\"'`]"],
+    ["/\\*\\s?ui\\s?\\*/\\s*{([^;]*)}", ":\\s*[\"'`]([^\"'`]*).*?[\"'`]"]
+  ],
+  "tailwindCSS.classAttributes": [
+    "class",
+    "className",
+    "ngClass",
+    "ui"
+  ],
     "typescript.tsdk": "node_modules\\typescript\\lib"
 }
