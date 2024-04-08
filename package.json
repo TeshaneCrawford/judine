@@ -40,7 +40,7 @@
     "vue-router": "^4.3.0"
   },
   "devDependencies": {
-    "@nuxt/eslint-config": "^0.2.0",
+    "@nuxt/eslint-config": "^0.3.1",
     "@nuxtjs/color-mode": "^3.3.3",
     "@nuxtjs/supabase": "^1.2.0",
     "@nuxtjs/tailwindcss": "^6.11.4",
@@ -48,14 +48,14 @@
     "@types/rellax": "^1.7.7",
     "@vueuse/core": "^10.9.0",
     "@vueuse/nuxt": "^10.9.0",
-    "eslint": "^8.57.0",
+    "eslint": "^9.0.0",
     "nuxt": "^3.11.2",
     "nuxt-auth-utils": "^0.0.22",
     "nuxt-headlessui": "^1.1.5",
     "nuxt-icon": "^0.6.9",
     "release-it": "^17.1.1",
     "typescript": "^5.4.2",
-    "vue-tsc": "^1.8.27",
+    "vue-tsc": "^2.0.11",
     "wrangler": "^3.48.0"
   },
   "release-it": {},
