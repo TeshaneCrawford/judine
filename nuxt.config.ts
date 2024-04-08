@@ -20,7 +20,8 @@ export default defineNuxtConfig({
     "nuxt-headlessui",
     "@nuxtjs/supabase",
     '@nuxthub/core',
-    "nuxt-auth-utils"
+    "nuxt-auth-utils",
+    "@nuxt/ui"
   ],
 
   headlessui: {
