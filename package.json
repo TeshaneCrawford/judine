@@ -7,10 +7,14 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
+    "deploy": "nuxthub deploy",
     "postinstall": "nuxt prepare",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "release": "release-it"
+    "typecheck": "nuxt typecheck",
+    "release": "release-it",
+    "logs": "wrangler pages deployment tail",
+    "logs:preview": "wrangler pages deployment tail --environment preview"
   },
   "files": [
     "app/",
