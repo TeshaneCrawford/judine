@@ -11,7 +11,8 @@ useHead({
 </script>
 
 <template>
-  <div>
+  <div class="min-h-[100dvh] overflow-x-auto relative" :class="{ 'flex flex-col md:block': $router.currentRoute.value.fullPath !== '/' }">
+    <UNotifications />
     <NuxtLoadingIndicator />
     <NuxtPage />
   </div>
