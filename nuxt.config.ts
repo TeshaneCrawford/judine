@@ -19,7 +19,8 @@ export default defineNuxtConfig({
     "nuxt-icon",
     "nuxt-headlessui",
     "@nuxtjs/supabase",
-    '@nuxthub/core'
+    '@nuxthub/core',
+    "nuxt-auth-utils"
   ],
 
   headlessui: {
