@@ -1,3 +1,6 @@
+import { pwa } from './config/pwa'
+import { appDescription } from './utils/appData'
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   pages: true,
@@ -14,22 +17,23 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@nuxt/image',
     "@vueuse/nuxt",
-    // "@nuxtjs/tailwindcss",
-    // "@nuxtjs/color-mode",
     "nuxt-icon",
     "nuxt-headlessui",
     "@nuxtjs/supabase",
     '@nuxthub/core',
     "nuxt-auth-utils",
-    "@nuxt/ui"
+    "@nuxt/ui",
+    "@vite-pwa/nuxt",
+    "@nuxt/fonts"
   ],
 
   headlessui: {
     prefix: 'Headless'
-},
+  },
 
   app: {
     head: {
+      viewport: 'width=device-width,initial-scale=1',
       link: [
         {
           rel: "preconnect",
@@ -43,9 +47,21 @@ export default defineNuxtConfig({
           href: "https://fonts.googleapis.com/css2?Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,400;0,600;0,700;1,400&display=swap",
           rel: "stylesheet",
         },
+        { rel: 'icon', href: '/favicon.ico', sizes: 'any' },
+        { rel: 'icon', type: 'image/svg+xml', href: '/nuxt.svg' },
+        { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' },
+      ],
+      meta: [
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        { name: 'description', content: appDescription },
+        { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' },
+        { name: 'theme-color', media: '(prefers-color-scheme: light)', content: 'white' },
+        { name: 'theme-color', media: '(prefers-color-scheme: dark)', content: '#222222' },
       ],
     },
   },
+
+  pwa,
 
   content: {
     documentDriven: true,
