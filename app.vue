@@ -5,7 +5,7 @@ useHead({
   },
   htmlAttrs: {
     lang: "en",
-    class: "font-body h-full antialiased",
+    class: "font-sans h-full antialiased",
   },
 });
 </script>

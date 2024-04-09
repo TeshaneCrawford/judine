@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 const plugin = require("tailwindcss/plugin");
+const defaultTheme = require('tailwindcss/defaultTheme');
 
 const srcDir = ".";
 
@@ -19,8 +20,8 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      display: ["Cormorant Garamond", "ui-serif", "Georgia"],
-      body: ["Poppins", "ui-sans-serif", "system-ui"],
+      sans: ['Alpino', ...defaultTheme.fontFamily.sans],
+      serif: ['Chillax', ...defaultTheme.fontFamily.serif],
     },
     extend: {
       maxWidth: {
