@@ -4,12 +4,12 @@
     },
     // Enable ESlint flat config support
   "eslint.experimental.useFlatConfig": true,
-    "files.associations": {
-      "*.css": "tailwind, postcss"
-  },
-  "editor.quickSuggestions": {
-      "strings": true
-  },
+  "files.associations": {
+    "*.css": "tailwindcss, postcss"
+},
+"editor.quickSuggestions": {
+    "strings": true
+},
   "tailwindCSS.experimental.configFile": "tailwind.config.cjs",
   "tailwindCSS.experimental.classRegex": [
     ["ui:\\s*{([^)]*)\\s*}", "[\"'`]([^\"'`]*).*?[\"'`]"],
