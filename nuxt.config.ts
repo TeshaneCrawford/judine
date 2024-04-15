@@ -24,7 +24,8 @@ export default defineNuxtConfig({
     "nuxt-auth-utils",
     "@nuxt/ui",
     "@vite-pwa/nuxt",
-    "@nuxt/fonts"
+    "@nuxt/fonts",
+    "@nuxt/eslint"
   ],
 
   headlessui: {
