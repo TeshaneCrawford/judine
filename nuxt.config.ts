@@ -17,7 +17,6 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@nuxt/image',
     "@vueuse/nuxt",
-    "nuxt-icon",
     "nuxt-headlessui",
     "@nuxtjs/supabase",
     '@nuxthub/core',
@@ -91,7 +90,7 @@ export default defineNuxtConfig({
   },
 
   runtimeConfig: {
-    instagramToken: process.env.NUXT_INSTAGRAM_ACCESS_TOKEN,
+    // instagramToken: process.env.NUXT_INSTAGRAM_ACCESS_TOKEN,
     supabaseUrl: process.env.NUXT_SUPABASE_URL,
     supabaseKey: process.env.NUXT_SUPABASE_KEY
   },
