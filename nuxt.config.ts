@@ -21,10 +21,10 @@ export default defineNuxtConfig({
     "@nuxtjs/supabase",
     '@nuxthub/core',
     "nuxt-auth-utils",
-    "@nuxt/ui",
     "@vite-pwa/nuxt",
     "@nuxt/fonts",
-    "@nuxt/eslint"
+    "@nuxt/eslint",
+    "@nuxt/ui"
   ],
 
   headlessui: {

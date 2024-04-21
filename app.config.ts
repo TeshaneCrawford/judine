@@ -37,11 +37,6 @@ export default defineAppConfig({
         background: 'bg-gray-500 dark:bg-gray-100',
       },
     },
-    nuxtIcon: {
-      size: '12px',
-      aliases: {
-        'postgresql': 'logos:postgresql'
-      }
-    }
+    nuxtIcon:{}
   },
 })
