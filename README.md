@@ -4,4 +4,4 @@ This is the source code for Judine's personal website. It is built using [Nuxt3]
 
 ## About the Website
 
-This website is a portfolio of Judine's work and a place to share her artistic skills. It is built using Nuxt3, a modern web framework for building powerful web applications. The website is hosted on [Cloudflare](https://www.cloudflare.com/).
+This website is a portfolio of Judine's work and a place to share her artistic skills. It is built using Nuxt3. The website is hosted on [Cloudflare](https://www.cloudflare.com/).
