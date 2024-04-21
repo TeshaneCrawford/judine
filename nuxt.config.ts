@@ -91,6 +91,10 @@ export default defineNuxtConfig({
     supabaseKey: process.env.NUXT_SUPABASE_KEY
   },
 
+  ui: {
+    icons: {}
+  },
+
   experimental: {
     viewTransition: true,
   }
