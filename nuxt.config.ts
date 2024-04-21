@@ -70,14 +70,10 @@ export default defineNuxtConfig({
     },
   },
 
-  colorMode: {
-    classSuffix: "",
-  },
-
-  tailwindcss: {
-    cssPath: './assets/css/tailwind.css',
-    configPath: './tailwind.config.cjs'
-  },
+  // tailwindcss: {
+  //   cssPath: './assets/css/tailwind.css',
+  //   // configPath: './tailwind.config.cjs'
+  // },
 
   plugins: [
     '~/plugins/parallax/index.ts',
