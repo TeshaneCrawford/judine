@@ -39,7 +39,14 @@ export async function generateNewAccessTokenInstagram(
 
     let outputData: InstagramData[] = [];
 
-    const requestParameters: any = {
+    interface RequestParameters {
+      fields: string;
+      limit: number;
+      access_token: string;
+      [key: string]: string | number; // Specify a more specific type for the key property
+    }
+
+    const requestParameters: RequestParameters = {
       fields: "id,permalink,caption,media_url,thumbnail_url,media_type,timestamp",
       limit: 9,
       access_token: token,
@@ -62,7 +69,7 @@ export async function generateNewAccessTokenInstagram(
       console.error("error", e);
 
       const newToken = await generateNewAccessTokenInstagram(token);
-      requestParameters.access_token = newToken;
+      requestParameters.access_token = newToken as string; // Add type assertion
       const requestURL = generateUrl(
         "https://graph.instagram.com/me/media",
         requestParameters

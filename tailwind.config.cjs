@@ -20,8 +20,8 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      sans: ['Alpino', ...defaultTheme.fontFamily.sans],
-      serif: ['Chillax', ...defaultTheme.fontFamily.serif],
+      sans: ['Alpino', ...defaultTheme.fontFamily.sans,],
+      serif: ['Chillax', ...defaultTheme.fontFamily.serif,],
     },
     extend: {
       maxWidth: {
