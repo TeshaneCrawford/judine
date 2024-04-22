@@ -1,16 +1,12 @@
 {
-    "editor.codeActionsOnSave": {
-      "source.fixAll.eslint": "explicit"
+    "files.associations": {
+        "*.css": "tailwindcss"
     },
-    // Enable ESlint flat config support
-  "eslint.experimental.useFlatConfig": true,
-  "files.associations": {
-    "*.css": "tailwindcss, postcss"
-},
-"editor.quickSuggestions": {
-    "strings": true
-},
-  "tailwindCSS.experimental.configFile": "tailwind.config.cjs",
+    "editor.quickSuggestions": {
+        "strings": true
+    },
+
+  "tailwindCSS.experimental.configFile": "tailwind.config.ts",
   "tailwindCSS.experimental.classRegex": [
     ["ui:\\s*{([^)]*)\\s*}", "[\"'`]([^\"'`]*).*?[\"'`]"],
     ["/\\*\\s?ui\\s?\\*/\\s*{([^;]*)}", ":\\s*[\"'`]([^\"'`]*).*?[\"'`]"]
@@ -21,5 +17,5 @@
     "ngClass",
     "ui"
   ],
-    "typescript.tsdk": "node_modules\\typescript\\lib"
+  "eslint.experimental.useFlatConfig": true,
 }

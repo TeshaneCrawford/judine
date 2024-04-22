@@ -4,7 +4,6 @@ import { appDescription } from './utils/appData'
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   pages: true,
-
   devtools: { enabled: true },
 
   typescript: {
@@ -12,91 +11,87 @@ export default defineNuxtConfig({
     shim: false,
     strict: true
   },
-
   modules: [
     '@nuxt/content',
     '@nuxt/image',
     "@vueuse/nuxt",
-    "nuxt-icon",
     "nuxt-headlessui",
     "@nuxtjs/supabase",
     '@nuxthub/core',
     "nuxt-auth-utils",
-    "@nuxt/ui",
     "@vite-pwa/nuxt",
     "@nuxt/fonts",
-    "@nuxt/eslint"
-  ],
+    "@nuxt/ui",
+    "@nuxt/eslint"],
 
-  headlessui: {
-    prefix: 'Headless'
-  },
-
-  app: {
-    head: {
-      viewport: 'width=device-width,initial-scale=1',
-      link: [
-        {
-          rel: "preconnect",
-          href: "https://fonts.googleapis.com",
-        },
-        {
-          rel: "preconnect",
-          href: "https://fonts.gstatic.com",
-        },
-        {
-          href: "https://fonts.googleapis.com/css2?Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,400;0,600;0,700;1,400&display=swap",
-          rel: "stylesheet",
-        },
-        { rel: 'icon', href: '/favicon.ico', sizes: 'any' },
-        { rel: 'icon', type: 'image/svg+xml', href: '/nuxt.svg' },
-        { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' },
-      ],
-      meta: [
-        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { name: 'description', content: appDescription },
-        { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' },
-        { name: 'theme-color', media: '(prefers-color-scheme: light)', content: 'white' },
-        { name: 'theme-color', media: '(prefers-color-scheme: dark)', content: '#222222' },
-      ],
+    headlessui: {
+      prefix: 'Headless'
     },
-  },
 
-  pwa,
-
-  content: {
-    documentDriven: true,
-    markdown: {
-      anchorLinks: false,
+    hub: {
+      blob: true
     },
-  },
 
-  colorMode: {
-    classSuffix: "",
-  },
+    app: {
+      head: {
+        viewport: 'width=device-width,initial-scale=1',
+        link: [
+          {
+            rel: "preconnect",
+            href: "https://fonts.googleapis.com",
+          },
+          {
+            rel: "preconnect",
+            href: "https://fonts.gstatic.com",
+          },
+          {
+            href: "https://fonts.googleapis.com/css2?Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,400;0,600;0,700;1,400&display=swap",
+            rel: "stylesheet",
+          },
+          { rel: 'icon', href: '/favicon.ico', sizes: 'any' },
+          { rel: 'icon', type: 'image/svg+xml', href: '/nuxt.svg' },
+          { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' },
+        ],
+        meta: [
+          { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+          { name: 'description', content: appDescription },
+          { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' },
+          { name: 'theme-color', media: '(prefers-color-scheme: light)', content: 'white' },
+          { name: 'theme-color', media: '(prefers-color-scheme: dark)', content: '#222222' },
+        ],
+      },
+    },
 
-  tailwindcss: {
-    cssPath: './assets/css/tailwind.css',
-    configPath: './tailwind.config.cjs'
-  },
+    pwa,
 
-  plugins: [
-    '~/plugins/parallax/index.ts',
-  ],
+    content: {
+      documentDriven: true,
+      markdown: {
+        anchorLinks: false,
+      },
+    },
 
-  supabase: {
-    url: process.env.NUXT_SUPABASE_URL,
-    key: process.env.NUXT_SUPABASE_KEY,
-    redirect: false
-  },
+    supabase: {
+      url: process.env.NUXT_SUPABASE_URL,
+      key: process.env.NUXT_SUPABASE_KEY,
+      redirect: false
+    },
 
-  runtimeConfig: {
-    instagramToken: process.env.NUXT_INSTAGRAM_ACCESS_TOKEN,
-    supabaseUrl: process.env.NUXT_SUPABASE_URL,
-    supabaseKey: process.env.NUXT_SUPABASE_KEY
-  },
+    runtimeConfig: {
+      // instagramToken: process.env.NUXT_INSTAGRAM_ACCESS_TOKEN,
+      supabaseUrl: process.env.NUXT_SUPABASE_URL,
+      supabaseKey: process.env.NUXT_SUPABASE_KEY
+    },
 
-  experimental: {
-    viewTransition: true,
-  }
+    ui: {
+      icons: {}
+    },
+
+    plugins: [
+      '~/plugins/parallax/index.ts'
+    ],
+
+    experimental: {
+      viewTransition: true,
+    }
 })
