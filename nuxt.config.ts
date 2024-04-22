@@ -21,13 +21,17 @@ export default defineNuxtConfig({
     "nuxt-auth-utils",
     "@vite-pwa/nuxt",
     "@nuxt/fonts",
-    "@nuxt/ui", 
+    "@nuxt/ui",
     "@nuxt/eslint"],
 
     headlessui: {
       prefix: 'Headless'
     },
-  
+
+    hub: {
+      blob: true
+    },
+
     app: {
       head: {
         viewport: 'width=device-width,initial-scale=1',
@@ -72,17 +76,21 @@ export default defineNuxtConfig({
       key: process.env.NUXT_SUPABASE_KEY,
       redirect: false
     },
-  
+
     runtimeConfig: {
       // instagramToken: process.env.NUXT_INSTAGRAM_ACCESS_TOKEN,
       supabaseUrl: process.env.NUXT_SUPABASE_URL,
       supabaseKey: process.env.NUXT_SUPABASE_KEY
     },
-  
+
     ui: {
       icons: {}
     },
-  
+
+    plugins: [
+      '~/plugins/parallax/index.ts'
+    ],
+
     experimental: {
       viewTransition: true,
     }
