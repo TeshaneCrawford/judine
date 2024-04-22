@@ -17,4 +17,5 @@
     "ngClass",
     "ui"
   ],
+  "eslint.experimental.useFlatConfig": true,
 }
