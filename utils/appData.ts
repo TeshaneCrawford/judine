@@ -1,2 +1,0 @@
-export const appName = 'Judine Fiddler - Artist & Designer';
-export const appDescription = 'Judine Fiddler is an artist and designer based in NYC. Her work is inspired by the natural world and the beauty of the everyday.';
