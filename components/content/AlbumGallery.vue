@@ -194,14 +194,18 @@ async function uploadImage (e: Event) {
 <template>
   <div>
     <h3>Images</h3>
-    <p>
+    <FancyBox>
+      <p>
       <img
         v-for="image of images"
         :key="image.pathname"
         width="200"
         :src="`/images/${image.pathname}`"
         :alt="image.pathname"
+        :href="image.pathname"
+        data-fancybox="gallery"
       >
     </p>
+    </FancyBox>
   </div>
 </template>
