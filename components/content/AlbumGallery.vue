@@ -174,37 +174,25 @@ async function clearSession() {
 </style> -->
 
 <script setup lang="ts">
-const { data: images, refresh } = await useFetch('/api/images')
-
-async function uploadImage (e: Event) {
-  // https://hub.nuxt.com/docs/storage/blob#useupload
-  const upload = useUpload('/api/images/upload', {
-    multiple: false
-  })
-  const form = e.target as HTMLFormElement
-  await upload(form.image)
-    .then(async () => {
-      form.reset()
-      await refresh()
-    })
-    .catch((err) => alert('Failed to upload image:\n'+ err.data?.message))
-}
+const { data: images } = await useFetch('/api/images')
 </script>
 
 <template>
   <div>
-    <h3>Images</h3>
+    <h3>Album</h3>
     <FancyBox>
       <p class="not-prose grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <img
+      <NuxtImg
         v-for="image of images"
         :key="image.pathname"
-        width="200"
         :src="`/images/${image.pathname}`"
         :alt="image.pathname"
         :href="`/images/${image.pathname}`"
         data-fancybox="gallery"
-      >
+        class="h-full w-full object-cover object-center"
+            loading="lazy"
+            sizes="sm:70px md:75px"
+      />
     </p>
     </FancyBox>
   </div>
