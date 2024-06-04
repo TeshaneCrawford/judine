@@ -1,4 +1,4 @@
-<script lang="ts" setup>
+<!-- <script lang="ts" setup>
 const isOpen = ref(false)
 
 const dropZoneRef = ref<HTMLElement>()
@@ -171,4 +171,37 @@ async function clearSession() {
     width: 100%;
   }
 }
-</style>
+</style> -->
+
+<script setup lang="ts">
+const { data: images, refresh } = await useFetch('/api/images')
+
+async function uploadImage (e: Event) {
+  // https://hub.nuxt.com/docs/storage/blob#useupload
+  const upload = useUpload('/api/images/upload', {
+    multiple: false
+  })
+  const form = e.target as HTMLFormElement
+  await upload(form.image)
+    .then(async () => {
+      form.reset()
+      await refresh()
+    })
+    .catch((err) => alert('Failed to upload image:\n'+ err.data?.message))
+}
+</script>
+
+<template>
+  <div>
+    <h3>Images</h3>
+    <p>
+      <img
+        v-for="image of images"
+        :key="image.pathname"
+        width="200"
+        :src="`/images/${image.pathname}`"
+        :alt="image.pathname"
+      >
+    </p>
+  </div>
+</template>
