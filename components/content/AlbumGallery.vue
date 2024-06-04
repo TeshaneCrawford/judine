@@ -195,14 +195,14 @@ async function uploadImage (e: Event) {
   <div>
     <h3>Images</h3>
     <FancyBox>
-      <p>
+      <p class="not-prose grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       <img
         v-for="image of images"
         :key="image.pathname"
         width="200"
         :src="`/images/${image.pathname}`"
         :alt="image.pathname"
-        :href="image.pathname"
+        :href="`/images/${image.pathname}`"
         data-fancybox="gallery"
       >
     </p>
