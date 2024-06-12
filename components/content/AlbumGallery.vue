@@ -182,7 +182,7 @@ const { data: images } = await useFetch('/api/images')
     <h3>Album</h3>
     <FancyBox>
       <!-- <p class="not-prose grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> -->
-        <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+        <div class="not-prose">
   <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
     <div class="space-y-2">
       <NuxtImg
