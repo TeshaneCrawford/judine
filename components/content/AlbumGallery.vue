@@ -181,10 +181,7 @@ const { data: images } = await useFetch('/api/images')
   <div>
     <h3>Album</h3>
     <FancyBox>
-      <!-- <p class="not-prose grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> -->
-        <div class="not-prose">
-  <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
-    <div class="space-y-2">
+      <p class="not-prose grid grid-cols-2 sm:grid-cols-4 gap-2 space-y-2">
       <NuxtImg
         v-for="image of images"
         :key="image.pathname"
@@ -196,10 +193,7 @@ const { data: images } = await useFetch('/api/images')
             loading="lazy"
             sizes="sm:70px md:75px"
       />
-    </div>
-  </div>
-</div>
-    <!-- </p> -->
+    </p>
     </FancyBox>
   </div>
 </template>
